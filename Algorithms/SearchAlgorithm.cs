@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Algorithms
 {
@@ -22,7 +20,7 @@ namespace Algorithms
             }
 
         }
-
+        //BinarySearch
         public static void BinarySearch(int[] Numbers, int numberToSeach)
         {
             bool isFound = false;
@@ -56,9 +54,7 @@ namespace Algorithms
                 }
             }
         }
-
-
-
+        //InterpolationSearch
         public static void InterpolationSearch(int[] Numbers, int numberToSeach)
         {
             bool isFound = false;
