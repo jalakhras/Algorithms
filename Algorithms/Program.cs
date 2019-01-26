@@ -18,6 +18,8 @@ namespace Algorithms
             SearchAlgorithm.LinearSearch(Numbers, 99822);
             Console.WriteLine();
             SearchAlgorithm.BinarySearch(Numbers, 99822);
+            Console.WriteLine();
+            SearchAlgorithm.InterpolationSearch(Numbers, 99822);
         }
     }
 }

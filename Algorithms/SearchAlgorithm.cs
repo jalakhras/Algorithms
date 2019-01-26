@@ -59,6 +59,40 @@ namespace Algorithms
 
 
 
+        public static void InterpolationSearch(int[] Numbers, int numberToSeach)
+        {
+            bool isFound = false;
+            int low = 0;
+            int hight = Numbers.Length - 1;
+            int mid = 0;
+            int numberOfTry = 0;
+            while (!isFound)
+            {
+                if (low > hight)
+                {
+                    Console.WriteLine("Number not found ");
+                    break;
+                }
+                mid = low + ((hight - low) / (Numbers[hight] - Numbers[low]))
+                    * (numberToSeach - Numbers[low]);
+                numberOfTry = numberOfTry + 1;
+                if (Numbers[mid] == numberToSeach)
+                {
+                    Console.WriteLine("Number is found " + numberToSeach);
+                    Console.WriteLine("Using binary Interpolation Search find after number of try " + numberOfTry);
+                    break;
+                }
+                if (Numbers[mid] < numberToSeach)
+                {
+                    low = mid + 1;
+                }
+                if (Numbers[mid] > numberToSeach)
+                {
+                    hight = mid - 1;
+                }
+            }
+
+        }
 
     }
 }
