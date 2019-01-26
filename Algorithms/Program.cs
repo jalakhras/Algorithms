@@ -16,6 +16,8 @@ namespace Algorithms
             // sort Arrey 
             Array.Sort(Numbers);
             SearchAlgorithm.LinearSearch(Numbers, 99822);
+            Console.WriteLine();
+            SearchAlgorithm.BinarySearch(Numbers, 99822);
         }
     }
 }

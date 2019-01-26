@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Text;
 
 namespace Algorithms
 {
@@ -21,7 +23,42 @@ namespace Algorithms
 
         }
 
-        
+        public static void BinarySearch(int[] Numbers, int numberToSeach)
+        {
+            bool isFound = false;
+            int low = 0;
+            int hight = Numbers.Length - 1;
+            int mid = 0;
+            int numberOfTry = 0;
+            while (!isFound)
+            {
+                mid = low + ((hight - low) / 2);
+
+                if (low > hight)
+                {
+                    Console.WriteLine("Number not found ");
+                    break;
+                }
+                numberOfTry = numberOfTry + 1;
+                if (Numbers[mid] == numberToSeach)
+                {
+                    Console.WriteLine("Number is found " + numberToSeach);
+                    Console.WriteLine("Using binary Search Algorithm find after number of try " + numberOfTry);
+                    break;
+                }
+                if (Numbers[mid] < numberToSeach)
+                {
+                    low = mid + 1;
+                }
+                if (Numbers[mid] > numberToSeach)
+                {
+                    hight = mid - 1;
+                }
+            }
+        }
+
+
+
 
     }
 }
