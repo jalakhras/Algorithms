@@ -6,7 +6,16 @@ namespace Algorithms
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            // generate int array 
+            int size = 1000000;
+            int[] Numbers = new int[size];
+            for (int i = 0; i < size; i++)
+            {
+                Numbers[i] = i + 1;
+            }
+            // sort Arrey 
+            Array.Sort(Numbers);
+            SearchAlgorithm.LinearSearch(Numbers, 99822);
         }
     }
 }
